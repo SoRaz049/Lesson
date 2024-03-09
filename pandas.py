@@ -12,6 +12,25 @@ def calculate_rating(data, industry = None):
     avg_rating = sum(rating) / len(rating)
     return max_rating, min_rating, avg_rating
 
+def production_house(data):
+    lists=[]
+    after_del=[]
+    for row in data:
+        if row[4] is not None:
+            lists.append(row[4])
+    
+    for i in range(len(lists)):
+        for j in range(i+1, len(lists)):
+            if lists[i]==lists[j]:
+                break
+        else:
+            after_del.append(lists[i])
+    
+    common_element = sorted(set(after_del).intersection(set(lists)))
+    for i, element in enumerate(common_element,1):
+        print(f"{i} . {element}")
+    #print("\n".join(after_del))
+
 try:
     with open("movies.csv") as f:
         reader = csv.reader(f)
@@ -30,16 +49,16 @@ try:
 
         ma, mi, avg = calculate_rating(data, industry="Hollywood")
         print(f"Hollywood records: Min rating = {mi}, Max rating = {ma}, Average rating = {avg}")
-    
+
+    production_house(data)
+        
 except FileNotFoundError:
     print("File not found")
 
 except ValueError:
     print("Value error found")
     
-except Exception as e:
-    print("Exception: ", type(e).__name__)
-    
-    
+#except Exception as e:
+ #   print("Exception: ", type(e).__name__)
     
     
