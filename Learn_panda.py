@@ -77,13 +77,14 @@
 import pandas as pd
 
 try:
-    df = pd.read_csv("movies.csv")
-    unique_studio = df['studio'].unique()
-    df.to_csv('output.csv', 
-    print(unique_studio)  
-    # print(df['studio'].value_counts())
-    # for i in range(len(unique)):
-    #     print(f"{i+1}. {unique[i]}")
+    df = pd.read_csv("movies.csv")  
+    new_df = df.dropna()
+
+    unique_studio = sorted(df['studio'].dropna().unique().tolist())
+
+    print(df['studio'].value_counts())
+    for i in range(len(unique_studio)):
+        print(f"{i+1}. {unique_studio[i]}")
 
 except TypeError:
     print("Error")    
