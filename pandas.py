@@ -27,9 +27,18 @@ def production_house(data):
             after_del.append(lists[i])
     
     common_element = sorted(set(after_del).intersection(set(lists)))
-    for i, element in enumerate(common_element,1):
-        print(f"{i} . {element}")
+ 
     #print("\n".join(after_del))
+    
+    counter(common_element, lists)
+    
+def counter (common_element, lists):
+    count = {}
+    for i in common_element:
+        if i in lists:
+            count[i] = lists.count(i)
+    for i, (key, value) in enumerate(count.items(),1):
+        print(f"{i} . {key}: {value}")
 
 try:
     with open("movies.csv") as f:
