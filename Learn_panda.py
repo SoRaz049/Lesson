@@ -78,14 +78,34 @@ import pandas as pd
 
 try:
     df = pd.read_csv("movies.csv")  
-    new_df = df.dropna()
+    df_boly = df.dropna()
 
     unique_studio = sorted(df['studio'].dropna().unique().tolist())
 
     print(df['studio'].value_counts())
     for i in range(len(unique_studio)):
         print(f"{i+1}. {unique_studio[i]}")
+    
+ 
+    def display_result(max_rate, min_rate, mean_rate, industry):
+        print(f"""\n
+The rating for {industry} is:
+The max rating is: {max_rate}
+The minimum rating is: {min_rate}
+The mean of the rating is: {mean_rate}""")
 
+    def Rating(df, indust):
+        df_filter = df[df.industry == indust]   
+        max_rate =  df_filter. imdb_rating.max()
+        min_rate =  df_filter. imdb_rating.min()
+        mean_rate =  df_filter. imdb_rating.mean()
+        return max_rate, min_rate, mean_rate 
+    
+    boly_stats = Rating(df, "Bollywood")
+    holy_stats = Rating(df, "Hollywood")
+    
+    boly_stats_display = display_result(*boly_stats, "Bollywood")
+    holy_stats_display = display_result(*holy_stats, "Hollywood")
 except TypeError:
     print("Error")    
 
