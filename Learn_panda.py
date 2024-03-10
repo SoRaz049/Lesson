@@ -110,7 +110,6 @@ The mean of the rating is: {mean_rate}"""
     boly_stats_display = display_result(*boly_stats, "Bollywood")
     holy_stats_display = display_result(*holy_stats, "Hollywood")
 
-    max_rating = df.imdb_rating.max()
 except TypeError:
     print("Error")
 
