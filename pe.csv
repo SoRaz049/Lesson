@@ -1,6 +1,6 @@
 tickers,eps,revenue,price,people,pe
 GOOGL,27.82,87.0,845.0,larry page,30.373831775700936
 WMT,4.61,484.0,65.0,n.a.,14.099783080260302
-MSFT,,85.0,64.0,bill gates,
-RIL ,,50.0,1023.0,mukesh ambani,
-TATA,5.6,,,ratan tata,
+MSFT,-1,85.0,64.0,bill gates,
+RIL ,-999,50.0,1023.0,mukesh ambani,
+TATA,5.6,-999,00,ratan tata,
