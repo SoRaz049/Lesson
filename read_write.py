@@ -28,9 +28,11 @@ df_financials = pd.read_excel("movies_db.xlsx", "financials", converters={
 )
 
 
-df_merged = pd.merge(df_movies, df_financials, on="movie_id" )
+df_merged = pd.merge(df_movies, df_financials, on="movie_id", how="outer" )
 
 print(df_merged)
+
+df_merged.dropna(inplace= True)
 
 df_merged.to_excel("movies_merged.xlsx", sheet_name="merged" , index= False)
 
@@ -55,3 +57,5 @@ with pd.ExcelWriter("weather_diseaster.xlsx") as writer:
     df_disasters.to_excel(writer, sheet_name="disasters", index= False)
     
      
+print(df_merged)
+
