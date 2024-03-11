@@ -23,3 +23,4 @@ df_clean = df.replace({
 df_clean.ffill(inplace = True)
 
 print(df_clean)
+
