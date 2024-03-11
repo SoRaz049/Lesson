@@ -1,0 +1,38 @@
+,movie_id,title,industry,language,release_year,imdb_rating,studio,budget,revenue,unit,currency,year_classify
+0,101,K.G.F: Chapter 2,Bollywood,Kannada,2022,8.4,Hombale Films,1.0,12.5,Billions,INR,From 2000
+1,102,Doctor Strange in the Multiverse of Madness,Hollywood,English,2022,7.0,Marvel Studios,200.0,954.8,Millions,USD,From 2000
+2,103,Thor: The Dark World ,Hollywood,English,2013,6.8,Marvel Studios,165.0,644.8,Millions,USD,From 2000
+3,104,Thor: Ragnarok ,Hollywood,English,2017,7.9,Marvel Studios,180.0,854.0,Millions,USD,From 2000
+4,105,Thor: Love and Thunder ,Hollywood,English,2022,6.8,Marvel Studios,250.0,670.0,Millions,USD,From 2000
+5,111,The Shawshank Redemption,Hollywood,English,1994,9.3,Castle Rock Entertainment,25.0,73.3,Millions,USD,before 2000
+6,113,Interstellar,Hollywood,English,2014,8.6,Warner Bros. Pictures,165.0,701.8,Millions,USD,From 2000
+7,115,The Pursuit of Happyness,Hollywood,English,2006,8.0,Columbia Pictures,55.0,307.1,Millions,USD,From 2000
+8,116,Gladiator,Hollywood,English,2000,8.5,Universal Pictures  ,103.0,460.5,Millions,USD,From 2000
+9,117,Titanic,Hollywood,English,1997,7.9,Paramount Pictures,200.0,2202.0,Millions,USD,before 2000
+10,118,It's a Wonderful Life,Hollywood,English,1946,8.6,Liberty Films,3.18,3.3,Millions,USD,before 2000
+11,119,Avatar,Hollywood,English,2009,7.8,20th Century Fox,237.0,2847.0,Millions,USD,From 2000
+12,120,The Godfather,Hollywood,English,1972,9.2,Paramount Pictures,7.2,291.0,Millions,USD,before 2000
+13,121,The Dark Knight,Hollywood,English,2008,9.0,Syncopy,185.0,1006.0,Millions,USD,From 2000
+14,122,Schindler's List,Hollywood,English,1993,9.0,Universal Pictures,22.0,322.2,Millions,USD,before 2000
+15,123,Jurassic Park,Hollywood,English,1993,8.2,Universal Pictures,63.0,1046.0,Millions,USD,before 2000
+16,124,Parasite,Hollywood,English,2019,8.5,,15.5,263.1,Millions,USD,From 2000
+17,125,Avengers: Endgame,Hollywood,English,2019,8.4,Marvel Studios,400.0,2798.0,Millions,USD,From 2000
+18,126,Avengers: Infinity War,Hollywood,English,2018,8.4,Marvel Studios,400.0,2048.0,Millions,USD,From 2000
+19,137,Captain America: The First Avenger,Hollywood,English,2011,6.9,Marvel Studios,216.7,370.6,Millions,USD,From 2000
+20,138,Captain America: The Winter Soldier,Hollywood,English,2014,7.8,Marvel Studios,177.0,714.4,Millions,USD,From 2000
+21,107,Dilwale Dulhania Le Jayenge,Bollywood,Hindi,1995,8.0,Yash Raj Films,400.0,2000.0,Millions,INR,before 2000
+22,108,3 Idiots,Bollywood,Hindi,2009,8.4,Vinod Chopra Films,550.0,4000.0,Millions,INR,From 2000
+23,109,Kabhi Khushi Kabhie Gham,Bollywood,Hindi,2001,7.4,Dharma Productions,390.0,1360.0,Millions,INR,From 2000
+24,110,Bajirao Mastani ,Bollywood,Hindi,2015,7.2,,1.4,3.5,Billions,INR,From 2000
+25,128,Taare Zameen Par,Bollywood,Hindi,2007,8.3,,120.0,1350.0,Millions,INR,From 2000
+26,129,Munna Bhai M.B.B.S.,Bollywood,Hindi,2003,8.1,Vinod Chopra Productions,100.0,410.0,Millions,INR,From 2000
+27,130,PK,Bollywood,Hindi,2014,8.1,Vinod Chopra Films,850.0,8540.0,Millions,INR,From 2000
+28,131,Sanju,Bollywood,Hindi,2018,,Vinod Chopra Films,1.0,5.9,Billions,INR,From 2000
+29,135,The Kashmir Files,Bollywood,Hindi,2022,8.3,Zee Studios,250.0,3409.0,Millions,INR,From 2000
+30,136,Bajrangi Bhaijaan,Bollywood,Hindi,2015,8.1,Salman Khan Films,900.0,11690.0,Millions,INR,From 2000
+31,139,Race 3,Bollywood,Hindi,2018,1.9,Salman Khan Films,1.8,3.1,Billions,INR,From 2000
+32,140,Shershaah,Bollywood,Hindi,2021,8.4,Dharma Productions,500.0,950.0,Millions,INR,From 2000
+33,127,Pather Panchali,Bollywood,Bengali,1955,8.3,Government of West Bengal,70000.0,100000.0,Thousands,INR,before 2000
+34,132,Pushpa: The Rise - Part 1,Bollywood,Telugu,2021,7.6,Mythri Movie Makers,2.0,3.6,Billions,INR,From 2000
+35,133,RRR,Bollywood,Telugu,2022,8.0,DVV Entertainment,5.5,12.0,Billions,INR,From 2000
+36,134,Baahubali: The Beginning,Bollywood,Telugu,2015,8.0,Arka Media Works,1.8,6.5,Billions,INR,From 2000
