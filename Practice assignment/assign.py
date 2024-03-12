@@ -50,7 +50,7 @@ import pandas as pd
 import pandas as pd
 
 df = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\food_db.csv")
-
 print(df.shape)
-
-
+new_df = df.replace({'discount': {'10%': '13%', '5%':'13%'}})
+new_df.replace({'rating': {'Excellent': 4, 'Very Good': 3, 'Good': 2, 'Average': 1}}, inplace= True)
+print(new_df)
