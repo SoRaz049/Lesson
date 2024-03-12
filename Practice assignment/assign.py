@@ -116,6 +116,6 @@ print("\n")
 print(df_movies.tail(5))
 
 df_movie = df_movies.ffill(limit= 1)
-df_movie.to_csv("final_complete_sata.csv", columns=['movie_id', 'title', 'lang_name', 'budget', 'revenue', 'currency'], index= False)
+df_movie.to_csv("final_complete_data.csv", columns=['movie_id', 'title', 'lang_name', 'budget', 'revenue', 'currency'], index= False)
 
 
