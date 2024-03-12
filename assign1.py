@@ -27,7 +27,7 @@ print(df.shape)
 print(df.columns.to_list())
 print(df)
 
-# new_df = df.fillna(-1, inplace= True)
+#new_df = df.fillna(-1, inplace= True)
 # print(new_df)
 
 
@@ -38,6 +38,9 @@ print(exp_nan_count)
 # Drop rows with at least 4 non-null values
 df_thresholded = df.dropna(thresh=4)
 
-# Print the resulting DataFrame
-print(df_thresholded)
+
+new1_df = df_thresholded.dropna()
+
+print(new1_df)
+new1_df.to_csv("final_data.csv", index = False)
     
