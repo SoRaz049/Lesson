@@ -4,13 +4,13 @@ movie_id,title,lang_name,budget,revenue,currency
 103,Thor: The Dark World ,English,165.0,644.8,USD
 104,Thor: Ragnarok ,English,180.0,854.0,USD
 105,Thor: Love and Thunder ,English,250.0,670.0,USD
-106,Sholay,Hindi,,,
+106,Sholay,Hindi,250.0,670.0,USD
 107,Dilwale Dulhania Le Jayenge,Hindi,400.0,2000.0,INR
 108,3 Idiots,Hindi,550.0,4000.0,INR
 109,Kabhi Khushi Kabhie Gham,Hindi,390.0,1360.0,INR
 110,Bajirao Mastani ,Hindi,1.4,3.5,INR
 111,The Shawshank Redemption,English,25.0,73.3,USD
-112,Inception,English,,,
+112,Inception,English,25.0,73.3,USD
 113,Interstellar,English,165.0,701.8,USD
 115,The Pursuit of Happyness,English,55.0,307.1,USD
 116,Gladiator,English,103.0,460.5,USD

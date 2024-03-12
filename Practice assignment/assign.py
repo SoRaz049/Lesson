@@ -111,11 +111,11 @@ df_movies = pd.merge(df_movies , df_languages, on ="language_id", how= "inner" )
 print("\n")
 print(df_movies.head(5))
 
-df_movie= pd.merge(df_movies , df_financials, on ="movie_id", how= "left" )
+df_movies= pd.merge(df_movies , df_financials, on ="movie_id", how= "left" )
 print("\n")
-print(df_movie.tail(5))
+print(df_movies.tail(5))
 
-df_movie.ffill()
+df_movie = df_movies.ffill(limit= 1)
 df_movie.to_csv("final_complete_sata.csv", columns=['movie_id', 'title', 'lang_name', 'budget', 'revenue', 'currency'], index= False)
 
 
