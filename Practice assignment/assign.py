@@ -47,10 +47,42 @@ import pandas as pd
 
 ## "ASSIGNMENT 3RD"
 
-import pandas as pd
+# df = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\food_db.csv")
+# print(df.shape)
+# new_df = df.replace({'discount': {'10%': '13%', '5%':'13%'}})
+# new_df.replace({'rating': {'Excellent': 4, 'Very Good': 3, 'Good': 2, 'Average': 1}}, inplace= True)
+# print(new_df)
 
-df = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\food_db.csv")
-print(df.shape)
-new_df = df.replace({'discount': {'10%': '13%', '5%':'13%'}})
-new_df.replace({'rating': {'Excellent': 4, 'Very Good': 3, 'Good': 2, 'Average': 1}}, inplace= True)
-print(new_df)
+
+
+##"ASSIGMENT 4TH"
+
+df = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\movies_data.csv")
+
+g= df.groupby(df['industry'])
+
+print("\n The data related to Bollywood is : \n")
+for industry, data in g:
+    if(industry == "Bollywood"):
+        print(data)
+        
+
+def grouper(df, idx, col):
+    if 1 <= df[col].loc[idx] <=3.9:
+        return 'Poor'
+    
+    elif 4 <= df[col].loc[idx] <=7.9:
+        return 'Average'
+    
+    elif 8 <= df[col].loc[idx] <=10:
+        return 'Good'
+    else:
+        return 'Others'
+
+g_new = df.groupby(lambda x : grouper(df, x, 'imdb_rating'))
+
+for key, data in g_new:
+    print('key:', key)
+    print('data:', data)
+
+    
