@@ -57,32 +57,55 @@ import pandas as pd
 
 ##"ASSIGMENT 4TH"
 
-df = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\movies_data.csv")
+# df = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\movies_data.csv")
 
-g= df.groupby(df['industry'])
+# g= df.groupby(df['industry'])
 
-print("\n The data related to Bollywood is : \n")
-for industry, data in g:
-    if(industry == "Bollywood"):
-        print(data)
+# print("\n The data related to Bollywood is : \n")
+# for industry, data in g:
+#     if(industry == "Bollywood"):
+#         print(data)
         
 
-def grouper(df, idx, col):
-    if 1 <= df[col].loc[idx] <=3.9:
-        return 'Poor'
+# def grouper(df, idx, col):
+#     if 1 <= df[col].loc[idx] <=3.9:
+#         return 'Poor'
     
-    elif 4 <= df[col].loc[idx] <=7.9:
-        return 'Average'
+#     elif 4 <= df[col].loc[idx] <=7.9:
+#         return 'Average'
     
-    elif 8 <= df[col].loc[idx] <=10:
-        return 'Good'
-    else:
-        return 'Others'
+#     elif 8 <= df[col].loc[idx] <=10:
+#         return 'Good'
+#     else:
+#         return 'Others'
 
-g_new = df.groupby(lambda x : grouper(df, x, 'imdb_rating'))
+# g_new = df.groupby(lambda x : grouper(df, x, 'imdb_rating'))
 
-for key, data in g_new:
-    print('key:', key)
-    print('data:', data)
+# for key, data in g_new:
+#     print('key:', key)
+#     print('data:', data)
 
     
+#"ASSIGNMENT 5TH"
+
+import pandas as pd
+
+df_movies = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\movies.csv")
+df_financials = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\financials.csv")
+df_languages = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\languages.csv")
+
+print(df_movies.head(3))
+print("\n")
+print(df_financials.head(3))
+print("\n")
+print(df_languages.head(3))
+
+df_new_movies = pd.read_csv("D:\\Data Science\\practice files\\Practice assignment\\new_movies.csv")
+
+df_new_movies = pd.concat([df_movies , df_new_movies], ignore_index= True)
+
+print(df_new_movies)
+
+
+
+
