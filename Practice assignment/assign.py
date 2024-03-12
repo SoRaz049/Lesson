@@ -104,8 +104,18 @@ df_new_movies = pd.read_csv("D:\\Data Science\\practice files\\Practice assignme
 
 df_new_movies = pd.concat([df_movies , df_new_movies], ignore_index= True)
 
-print(df_new_movies)
+print(df_new_movies.tail(5))
 
 
+df_movies = pd.merge(df_movies , df_languages, on ="language_id", how= "inner" )
+print("\n")
+print(df_movies.head(5))
+
+df_movie= pd.merge(df_movies , df_financials, on ="movie_id", how= "left" )
+print("\n")
+print(df_movie.tail(5))
+
+df_movie.ffill()
+df_movie.to_csv("final_complete_sata.csv", columns=['movie_id', 'title', 'lang_name', 'budget', 'revenue', 'currency'], index= False)
 
 
