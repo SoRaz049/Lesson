@@ -1,0 +1,8 @@
+/home/davis/source/dlib/dlib/java/build/CMakeFiles/myproject.dir
+/home/davis/source/dlib/dlib/java/build/CMakeFiles/myproject_swig_compilation.dir
+/home/davis/source/dlib/dlib/java/build/CMakeFiles/edit_cache.dir
+/home/davis/source/dlib/dlib/java/build/CMakeFiles/rebuild_cache.dir
+/home/davis/source/dlib/dlib/java/build/CMakeFiles/list_install_components.dir
+/home/davis/source/dlib/dlib/java/build/CMakeFiles/install.dir
+/home/davis/source/dlib/dlib/java/build/CMakeFiles/install/local.dir
+/home/davis/source/dlib/dlib/java/build/CMakeFiles/install/strip.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fPIC -O3 -DNDEBUG -shared  -o lib/libmyproject.so CMakeFiles/myproject.dir/lib/java_src/net/dlib/swigJAVA_wrap.cxx.o

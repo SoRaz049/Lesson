@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/davis/source/dlib/dlib/java/build/swig.i
+exception
+-
+stdexcept
+-
+swig_api.h
+/home/davis/source/dlib/dlib/java/build/swig_api.h
+swig_api.h
+/home/davis/source/dlib/dlib/java/build/swig_api.h
+
+/home/davis/source/dlib/dlib/java/java_array.h
+
+/home/davis/source/dlib/dlib/java/swig_api.h
+dlib/java/java_array.h
+-
+dlib/java/java_array.h
+-
+

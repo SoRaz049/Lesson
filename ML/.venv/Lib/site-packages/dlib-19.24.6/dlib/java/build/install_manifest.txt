@@ -1,0 +1,2 @@
+/home/davis/source/dlib/dlib/java/./libmyproject.so
+/home/davis/source/dlib/dlib/java/./myproject.jar
