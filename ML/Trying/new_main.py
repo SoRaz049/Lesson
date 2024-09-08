@@ -5,6 +5,17 @@ import pickle
 import face_recognition
 import numpy as np
 import cvzone
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+from firebase_admin import storage
+
+
+cred = credentials.Certificate("D:/Data Science/practice files/ML/Trying/serviceAccountKey.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL' : "https://faceattendance-3e3b7-default-rtdb.firebaseio.com/", "storageBucket": "faceattendance-3e3b7.appspot.com"})
+
+
 
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
@@ -30,6 +41,10 @@ encodeListKnownWithIds = pickle.load(file)
 file.close()
 encodeListKnown, studentIds = encodeListKnownWithIds
 
+modeType = 0
+counter = 0
+id = -1
+
 # Open the camera feed and run face recognition
 while True:
     ret, image = cap.read() 
@@ -44,7 +59,7 @@ while True:
 
     # Insert the image into the background at specified locations
     imgBackground[162:162 + 480, 55: 55 + 640] = image
-    imgBackground[44:44 + 633, 808: 808 + 414] = imgModeList[1]  
+    imgBackground[44:44 + 633, 808: 808 + 414] = imgModeList[modeType]  
 
 
     # Loop through each face encoding and its corresponding location in the current frame
@@ -68,11 +83,24 @@ while True:
         if matches[matchIndex]:
             # print(f"Known Face detected.")
             # print(studentIds[matchIndex])
+            
+            # To create the rectanglular frame across the face structure.
             y1, x2, y2, x1 = FaceLoc
             y1, x2, y2, x1 = y1 * 4, x2 * 4, y2 * 4, x1 * 4
             bbox = 55 + x1, 162 + y1, x2 - x1, y2 - y1
             imgBackground = cvzone.cornerRect(imgBackground, bbox, rt = 0)
+            id = studentIds[matchIndex]  # to extract the id of the matched image.
             
+            if counter == 0:
+                counter = 1
+                modeType = 1
+    
+    if counter !=0:
+        if counter == 1:
+            studentInfo = db.reference(f"Students/{id}").get() # fetches the data of the student from the database.
+            print(studentInfo)
+        
+        cv2.putText(imgBackground, str(studentInfo['total_attendance']), (861, 125), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
             
     # To display he camara with tthe tile "Face Attendance."
     cv2.imshow("Face Attendance", imgBackground)
