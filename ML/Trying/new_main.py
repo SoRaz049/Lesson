@@ -36,7 +36,7 @@ for path in modePath:
         imgModeList.append(img)
 
 # Load the encoding file
-file = open("EncodeFile.p", "rb")
+file = open("D:/Data Science/practice files/ML/Trying/EncodeFile.p", "rb")
 encodeListKnownWithIds = pickle.load(file)
 file.close()
 encodeListKnown, studentIds = encodeListKnownWithIds
@@ -101,7 +101,19 @@ while True:
             print(studentInfo)
         
         cv2.putText(imgBackground, str(studentInfo['total_attendance']), (861, 125), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
+        
+        cv2.putText(imgBackground, str(studentInfo['name']), (808, 445), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
+        
+        cv2.putText(imgBackground, str(studentInfo['major']), (1006, 550), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
             
+        cv2.putText(imgBackground, str(id), (1006,  493), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
+        
+        cv2.putText(imgBackground, str(studentInfo['standing']), (910, 625), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
+        
+        cv2.putText(imgBackground, str(studentInfo['year']), (1025, 625), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
+        
+        cv2.putText(imgBackground, str(studentInfo['starting_attendance']), (1125, 625), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
+        
     # To display he camara with tthe tile "Face Attendance."
     cv2.imshow("Face Attendance", imgBackground)
     if cv2.waitKey(10) == ord("q"):
